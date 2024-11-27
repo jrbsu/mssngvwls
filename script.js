@@ -24,10 +24,10 @@ const categories = {
         'Jim Halpert'
     ],
     'Things Found In Space': [
-        'Nebula',
+        'Horsehead Nebula',
         'Black Hole',
         'Supernova',
-        'Comet Trail'
+        'International Space Station'
     ],
     'Superheroes And Their Weaknesses': [
         'Superman And Kryptonite',
@@ -94,6 +94,18 @@ const categories = {
         'Adam West',
         'George Clooney',
         'Val Kilmer'
+    ],
+    'Countries and their largest export': [
+        'United Kingdom and gold',
+        'United States and oil',
+        'Brazil and iron ore',
+        'Germany and cars'
+    ],
+    'Countries and their largest export': [
+        'United Kingdom and gold',
+        'United States and oil',
+        'Brazil and iron ore',
+        'Germany and cars'
     ],
 };
 
