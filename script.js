@@ -1,87 +1,99 @@
 const categories = {
     'Landmarks': [
-        'BRIDGE OF SIGHS',
-        'EIFFEL TOWER',
-        'STATUE OF LIBERTY',
-        'GREAT WALL OF CHINA'
+        'Bridge Of Sighs',
+        'Eiffel Tower',
+        'Statue Of Liberty',
+        'Great Wall Of China'
     ],
-    'Food pairs': [
-        'MACARONI AND CHEESE',
-        'PEANUT BUTTER AND JELLY',
-        'FISH AND CHIPS',
-        'SPAGHETTI AND MEATBALLS'
+    'Food Pairs': [
+        'Macaroni And Cheese',
+        'Peanut Butter And Jelly',
+        'Fish And Chips',
+        'Spaghetti And Meatballs'
     ],
     'Duos': [
-        'SHERLOCK HOLMES AND JOHN WATSON',
-        'BATMAN AND ROBIN',
-        'LILO AND STITCH',
-        'FRODO BAGGINS AND SAMWISE GAMGEE'
+        'Sherlock Holmes And John Watson',
+        'Batman And Robin',
+        'Lilo And Stitch',
+        'Frodo Baggins And Samwise Gamgee'
     ],
-    'Office supplies': [
-        'STAPLER',
-        'PAPER CLIP',
-        'RUBBER BAND',
-        'POST IT NOTE'
+    'Things found in an office': [
+        'Stapler',
+        'Binder Clip',
+        'Coffee machine',
+        'Jim Halpert'
     ],
-    'Things found in space': [
-        'NEBULA',
-        'BLACK HOLE',
-        'SUPERNOVA',
-        'COMET TRAIL'
+    'Things Found In Space': [
+        'Nebula',
+        'Black Hole',
+        'Supernova',
+        'Comet Trail'
     ],
-    'Superheroes and their weaknesses': [
-        'SUPERMAN AND KRYPTONITE',
-        'MAGNETO AND MAGNETIC FIELDS',
-        'GREEN LANTERN AND YELLOW LANTERNS',
-        'AQUAMAN AND WATER DEPRIVATION'
+    'Superheroes And Their Weaknesses': [
+        'Superman And Kryptonite',
+        'Magneto And Magnetic Fields',
+        'Green Lantern And Yellow Lanterns',
+        'Aquaman And Water Deprivation'
     ],
-    'Unusual pets': [
-        'FERRET',
-        'CAPYBARA',
-        'AXOLOTL',
-        'SUGAR GLIDER'
+    'Unusual Pets': [
+        'Ferret',
+        'Capybara',
+        'Axolotl',
+        'Sugar Glider'
     ],
-    'Roald Dahl books': [
-        'CHARLIE AND THE CHOCOLATE FACTORY',
-        'JAMES AND THE GIANT PEACH',
-        'MATILDA',
-        'THE ENORMOUS CROCODILE'
+    'Roald Dahl Books': [
+        'Charlie And The Chocolate Factory',
+        'James And The Giant Peach',
+        'Matilda',
+        'The Enormous Crocodile'
     ],
-    'Breakfast foods': [
-        'OMELETTE',
-        'FULL ENGLISH',
-        'SAUSAGE AND EGGS',
-        'BREAKFAST BURRITO'
+    'Breakfast Foods': [
+        'Omelette',
+        'Full English',
+        'Sausage And Eggs',
+        'Breakfast Burrito'
     ],
-    'Film titles off by one': [
-        'ELEVEN ANGRY MEN',
-        'FOUR BILLBOARDS OUTSIDE EBBING, MISSOURI',
-        'THIRTEEN YEARS A SLAVE',
-        'DISTRICT TEN'
+    'Film Titles Off By One': [
+        'Eleven Angry Men',
+        'Four Billboards Outside Ebbing, Missouri',
+        'Thirteen Years A Slave',
+        'District Ten'
     ],
-    'Disney film opposites': [
-        'THE BIG MERMAID',
-        'AWAKE BEAUTY',
-        'THE PRINCE AND THE FROG',
-        'DOWN'
+    'Disney Film Opposites': [
+        'The Big Mermaid',
+        'Awake Beauty',
+        'The Prince And The Frog',
+        'Down'
     ],
     'Classic Cocktails': [
-        'DARK AND STORMY',
-        'PAINKILLER',
-        'WHITE NEGRONI',
-        'FRENCH SEVENTY-FIVE'
+        'Dark And Stormy',
+        'Painkiller',
+        'White Negroni',
+        'French Seventy-Five'
     ],
-    'Things with horns': [
-        'RHINOCEROUS',
-        'HERCULES BEETLE',
-        'BRASS BAND',
-        'TOYOTA CAMRY',
+    'Things With Horns': [
+        'Rhinoceros',
+        'Hercules Beetle',
+        'Brass Band',
+        'Toyota Camry'
     ],
-    'Things with keys': [
-        'COMPUTER KEYBOARD',
-        'GRAND PIANO',
-        'TREASURE CHEST',
-        'FLORIDA',
+    'Things With Keys': [
+        'Computer Keyboard',
+        'Grand Piano',
+        'Treasure Chest',
+        'Florida'
+    ],
+    'Chess openings': [
+        'King\'s Pawn',
+        'Ruy Lopez',
+        'Scandinavian Defence',
+        'Bongcloud'
+    ],
+    'Actors who have played Batman': [
+        'Christian Bale',
+        'Adam West',
+        'George Clooney',
+        'Val Kilmer'
     ],
 };
 
@@ -114,6 +126,11 @@ const nextRoundPhrases = [
     'The journey continues.',
     'Next.',
     'Time for another.',
+    'Let\'s go.',
+    'Yeehaw.',
+    'Allons y.',
+    'Let\'s roll.',
+    'Make it happen.'
 ];
 
 const rounds = [];
@@ -175,7 +192,9 @@ document.addEventListener('keydown', (event) => {
 });
 
 document.addEventListener('click', (event) => {
-    advanceRound();
+    if (!event.target.closest('a')) {
+        advanceRound();
+    }
 });
 
 updateDisplay();
