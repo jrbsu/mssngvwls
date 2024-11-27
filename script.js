@@ -157,16 +157,25 @@ function updateDisplay() {
     }
 }
 
+function advanceRound() {
+    if (!rounds[currentIndex].isInterstitial && clueElement.textContent !== rounds[currentIndex].answer.toUpperCase()) {
+        clueElement.textContent = rounds[currentIndex].answer.toUpperCase();
+    } else {
+        // Go to the next clue
+        currentIndex = (currentIndex + 1) % rounds.length;
+        updateDisplay();
+    }
+}
+
 document.addEventListener('keydown', (event) => {
     if (event.code === 'Space') {
         event.preventDefault();
-        if (!rounds[currentIndex].isInterstitial && clueElement.textContent !== rounds[currentIndex].answer.toUpperCase()) {
-            clueElement.textContent = rounds[currentIndex].answer.toUpperCase();
-        } else {
-            currentIndex = (currentIndex + 1) % rounds.length;
-            updateDisplay();
-        }
+        advanceRound();
     }
+});
+
+document.addEventListener('click', (event) => {
+    advanceRound();
 });
 
 updateDisplay();
