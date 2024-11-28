@@ -101,11 +101,17 @@ const categories = {
         'Brazil and iron ore',
         'Germany and cars'
     ],
-    'Countries and their largest export': [
-        'United Kingdom and gold',
-        'United States and oil',
-        'Brazil and iron ore',
-        'Germany and cars'
+    'London Underground stations': [
+        'Piccadilly Circus',
+        'Brixton',
+        'Tottenham Court Road',
+        'Waterloo'
+    ],
+    'Baseball terms': [
+        'Home run',
+        'Grand slam',
+        'Stolen base',
+        'Double play'
     ],
 };
 
